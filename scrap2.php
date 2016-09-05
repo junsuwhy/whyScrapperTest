@@ -28,10 +28,12 @@ while($keep){
     $e = $e->children(3);
     $money = $e->innertext;
     $money = preg_replace("/[ ,元]/i",'',$money);
-    print($name);
-    print(",");
-    print($money);
-    print("\n");
+    if($money <= 10000000){
+      print($name);
+      print(",");
+      print($money);
+      print("\n");
+    }
   } 
 
   $round++;
